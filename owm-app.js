@@ -18,6 +18,8 @@ angular
 	.controller('HomeCtrl', function($scope){
 
 	})
-	.controller('CityCtrl', function($scope){
-
+	.controller('CityCtrl', function($scope, $routeParams){
+		//$routeParams prevent scope variable from being too specific (NY)
+		//will render info specific to the route based off of data that was passed to the URL
+		$scope.city = $routeParams.city;
 	})

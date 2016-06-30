@@ -9,17 +9,18 @@ angular
 			templateUrl : 'home.html',
 			controller : 'HomeCtrl'
 		//another route for viewing the details of weather in a particular city
-		}).when('/city', {
+		//using the colon character tells $routeProvider to treat the URL as a dynamic value
+		}).when('/cities/:city', {
 			templateUrl : 'city.html',
 			controller : 'CityCtrl'
 		});
 	}])
 	//controller is defined as HomeCtrl
-	.controller('HomeCtrl', function($scope){
+	.controller('HomeCtrl', ['$scope', function($scope){
 
-	})
-	.controller('CityCtrl', function($scope, $routeParams){
+	}])
+	.controller('CityCtrl', ['$scope', '$routeParams', function($scope, $routeParams){
 		//$routeParams prevent scope variable from being too specific (NY)
 		//will render info specific to the route based off of data that was passed to the URL
 		$scope.city = $routeParams.city;
-	})
+	}])

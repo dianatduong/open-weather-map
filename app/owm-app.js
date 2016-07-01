@@ -35,7 +35,7 @@ angular
 				}
 			}
 		})
-		.when('error', {
+		.when('/error', {
 			//this template property supplies an in-line template. This practice should be avoided because it mixes template and JS code 
 			template : '<p>Error - Page Not Found</p>' 
 		})

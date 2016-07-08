@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Open Weather Map App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<!-- toggling the isLoading scope on and off -->
+<body ng-class="{loading: isLoading}">
 
 	<a ng-href="#/cities/New%20York">New York</a>
     <a ng-href="#/cities/Dallas">Dallas</a>
@@ -13,7 +15,7 @@
 
 
 
-	<!-- ng-view attribute (directive) will be the container where individual route templates will be loaded -->
+	<!-- ng-view attribute (directive) will be the container where individual route tesmplates will be loaded -->
     <div ng-view></div>
 
 

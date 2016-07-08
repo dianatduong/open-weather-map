@@ -1,6 +1,6 @@
 angular
 	//declaring a module named OWMApp and injecting ngRoute as a dependency
-	.module('OWMApp', ['ngRoute'])
+	.module('OWMApp', ['ngRoute', 'ngAnimate'])
 		.value('owmCities',
 		 ['New York', 'Dallas', 'Chicago'])
 	//$routeProvider is used to set URL routing rules
